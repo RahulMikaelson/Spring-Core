@@ -2,13 +2,13 @@ package com.varun_matangi.spring.Game;
 
 public class GameRunner {
 
-    public MarioGame marioGame;
+    public GameInterface game;
 
-    public GameRunner(MarioGame marioGame) {
-        this.marioGame = marioGame;
+    public GameRunner(GameInterface game) {
+        this.game = game;
     }
 
     public void run(){
-        this.marioGame.consoleOutPut();
+        this.game.consoleOutPut();
     }
 }

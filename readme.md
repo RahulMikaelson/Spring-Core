@@ -2,11 +2,6 @@
 
 Learning Spring Core Fundamentals
 
-## Description
+### Explanation (Loose Coupling)
 
-At this point we have a class called GameRunner class which is used to run a game. As the class name defines it runs the game so it is dependent on another game called MarioGame. So GameRunner class requires a game object to run.
-
-
-### Explanation (Tight Coupling)
-
-To run GameRunner class it is dependent on MarioGame till now it works fine, so the problem occurs here is what if we want to run another game. we have to change all the dependencies in main method and also in Game Runner class. so every time if we want change the game we have to make many changes in two different classes this make the code tightly coupled.
+To run GameRunner we need an object of a game class. but now we have made an interface and that interface is implemented by both MarioGame and PackMan Game  and we made GameRunner class to be dependent on the Interface so that we have to pass any of the game class still it will be working as expected in this way we have achieved loose coupling.
