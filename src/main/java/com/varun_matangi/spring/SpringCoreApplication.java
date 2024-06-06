@@ -1,5 +1,7 @@
 package com.varun_matangi.spring;
 
+import com.varun_matangi.spring.Game.GameRunner;
+import com.varun_matangi.spring.Game.MarioGame;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringCoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCoreApplication.class, args);
+		//SpringApplication.run(SpringCoreApplication.class, args);
+		MarioGame marioGame = new MarioGame();
+		GameRunner gameRunner =new GameRunner(marioGame);
+		gameRunner.run();
 	}
 
 }
