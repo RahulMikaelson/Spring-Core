@@ -1,4 +1,5 @@
-package com.varun_matangi.spring.Game;
+package com.varun_matangi.spring.Configuration.Game;
+
 
 public interface GameInterface {
     public void consoleOutPut();

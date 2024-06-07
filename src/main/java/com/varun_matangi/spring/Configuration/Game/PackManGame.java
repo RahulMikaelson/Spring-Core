@@ -1,4 +1,4 @@
-package com.varun_matangi.spring.Game;
+package com.varun_matangi.spring.Configuration.Game;
 
 public class PackManGame implements GameInterface{
 
