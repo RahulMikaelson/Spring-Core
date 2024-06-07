@@ -35,13 +35,28 @@ If we are having two beans of same class then while calling the specific class's
 
 @Qualifier
 This annotation will also works mostly same as the @Primary annotation but the difference lies is when we are having multiple beans of same classes and we want to use specific bean the we will annotate with @Qualifier annotation and give it a input name. so when ever we want to call a specific bean then we will use Qualifer annotation.
+
+
+### Configuring without Configuration class
+
+@Component
+public class MarioGame(){}
+@Component is a class level annotation where as @bean is a function level annotation this is also used to create bean. so when the spring looks under component scan base package then it create the bean for the classes which are annotated with @Component.
+
+
+@Autowired
+This annotation is used to attach the required dependency object with the bean so when we want to inject the dependency of the class we use autowire to autowire the bean.
+
+
+
+
 ```
 
 ### Spring Container
 
 ```
 public static void main(String[] args) {
-		var context = new AnnotationConfigApplicationContext(GameConfig.class);
+		var context = new AnnotationConfigApplicationContext("com.varun_matangi.spring");
 		GameRunner runner = context.getBean(GameRunner.class);
 		runner.run();
 	}
